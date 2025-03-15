@@ -15,41 +15,95 @@ body{
 /* sidebar */
 aside{
     background-color: #282A2C;
-    width: 75px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    padding: 1.8rem 0 4.7rem 0;
+    align-items: start;
+    padding: 1.3rem 1rem 4.7rem 1rem;
+    transition: .3s;
 }
+/* aside:hover{
+    width: 380px !important;
+} */
+
+aside.small-w{
+    width: 75px;
+}
+aside.big-w{
+    width: 380px;
+}
+
 aside div{
     display: flex;
     flex-direction: column;
     color: #A2AAB0;
 }
+aside span{
+    cursor: pointer;
+}
 .aside-top{
-    gap: 3.45rem;
+    gap: 3rem;
 }
 .aside-top span:first-child{
     font-size: 1.25rem;
     color: #C4C7C5;
-    align-self: center;
+    /* align-self: center; */
+    padding: .5rem;
+    border-radius: 50%;
+    transition: .2s;
+    width: fit-content;
 }
-.aside-top span:last-child{
+.aside-top span:first-child:hover{
+    background-color: #353739;
+}
+
+.plus-icon{
     background-color: #202123;
     font-weight: 600;
     color: #757577;
-    padding: .5rem;
-    border-radius: 50%;
-}
-.aside-bottom{
+    padding: .75rem;
+    border-radius: 50px;
+    transition: .2s;
+    display: flex;
     gap: 1rem;
-}
-.aside-bottom span{
-    font-size: 1.25rem;
+    align-items: center;
+    overflow: hidden;
 }
 
+.small-plus{
+    width: 40px;
+}
+.big-plus{
+    width: 125px;
+}
+.new-chat{
+    font-size: .85rem;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.aside-bottom span{
+    font-size: 1.25rem;
+    margin: .5rem;
+    border-radius: 50px;
+    transition: .2s;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 .5rem;
+}
+
+.ab-text{
+    font-size: .85rem !important;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.aside-bottom span:hover{
+    background-color: #353739;
+}
 
 main{
     background-color: #1B1C1D;
@@ -64,6 +118,19 @@ nav{
     align-items: center;
     color: white;
     padding: .8rem 1.5rem .8rem 1rem;
+}
+
+.nav-left{
+    padding: .1rem .5rem .25rem .25rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.nav-left:hover{
+    background-color: #2D2E2F;
+    padding: .1rem .5rem .25rem .25rem;
+    border-radius: .5rem;
+    transition: .2s;
 }
 
 .logo span{
@@ -94,20 +161,35 @@ nav{
     justify-content: center;
     align-items: center;
 }
+.advanced:hover{
+    background-color: #4C4E51;
+}
 .advanced img{
     width: 1rem;
     margin-right: .5rem;
 }
 .apps-icon{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    margin-top: 5px;
+    cursor: pointer;
+}
+.apps-icon{
+    padding: .5rem;
+    border-radius: 50%;
+    transition: .2s;
+}
+.apps-icon:hover{
+    background-color: #353739;
 }
 .profile-image{
     width: 2rem;
     border-radius: 50%;
     margin-top: 5px;
+}
+.profile-image:hover{
+    box-shadow: 0px 0px 0px 5px #353739;
+    transition: .2s;
 }
 
 
@@ -159,6 +241,7 @@ nav{
     color: #757577;
     padding: .5rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 .question-cont span:hover{
     background-color: #262829;

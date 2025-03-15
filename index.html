@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav-icon.svg" type="image/x-icon">
     <title>Mujahid's ChatBot</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -12,16 +13,16 @@
     
 </head>
 <body>
-    <aside>
+    <aside class="small-w hi">
         <div class="aside-top">
             <span class="material-symbols-outlined menu-icon">menu</span>
-            <span class="material-symbols-outlined plus-icon">add</span>
+            <span class="small-plus plus-icon"><i class="fa-solid fa-plus"></i> <span class="new-chat">New Chat</span></span>
         </div>
         <div class="aside-bottom">
-            <span class="material-symbols-outlined">diamond</span>
-            <span class="material-symbols-outlined">help</span>
-            <span class="material-symbols-outlined">history</span>
-            <span class="material-symbols-outlined">settings</span>
+            <span><i class="fa-regular fa-gem"></i><span class="ab-text">Gem manager</span></span>
+            <span><i class="fa-regular fa-circle-question"></i><span class="ab-text">Help</span></span>
+            <span><i class="fa-solid fa-clock-rotate-left"></i><span class="ab-text">Activity</span></span>
+            <span><i class="fa-solid fa-gear"></i><span class="ab-text">Settings</span></span>
         </div>
     </aside>
     <main>
@@ -62,5 +63,8 @@
             </div>
         </div>
     </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
 </body>
 </html>
