@@ -13,23 +13,24 @@
     
 </head>
 <body>
-    <aside class="small-w hi">
+    <aside class="small-w aside">
         <div class="aside-top">
             <span class="material-symbols-outlined menu-icon">menu</span>
             <span class="small-plus plus-icon"><i class="fa-solid fa-plus"></i> <span class="new-chat">New Chat</span></span>
         </div>
         <div class="aside-bottom">
-            <span><i class="fa-regular fa-gem"></i><span class="ab-text">Gem manager</span></span>
-            <span><i class="fa-regular fa-circle-question"></i><span class="ab-text">Help</span></span>
-            <span><i class="fa-solid fa-clock-rotate-left"></i><span class="ab-text">Activity</span></span>
-            <span><i class="fa-solid fa-gear"></i><span class="ab-text">Settings</span></span>
+            <span class="ab-text small-ab-text"><i class="fa-regular fa-gem"></i>Gem manager</span>
+            <span class="ab-text small-ab-text"><i class="fa-regular fa-circle-question"></i>Help</span>
+            <span class="ab-text small-ab-text"><i class="fa-solid fa-clock-rotate-left"></i>Activity</span>
+            <span class="ab-text small-ab-text"><i class="fa-solid fa-gear"></i>Settings</span>
         </div>
     </aside>
     <main>
         <nav>
             <div class="nav-left">
-                <div class="logo"><span>Gemini</span>
-                    <span class="material-symbols-outlined">arrow_drop_down</span>
+                <div class="logo">
+                    <span>Gemini</span>
+                    <span><i class="fa-solid fa-sort-down"></i></span>
                 </div>
                 <div class="verson">2.0 Flash</div>
             </div>
@@ -53,10 +54,11 @@
 
 
         <div class="bottom-cont">
-            <div class="question-cont">
+            <div class="input-cont">
                 <span class="material-symbols-outlined plus-icon">add</span>
-                <input type="text" placeholder="Ask Gemini" required>
-                <span class="material-symbols-outlined">mic</span>
+                <input class="text-input" type="text" placeholder="Ask Gemini" required>
+                <span class="material-symbols-outlined mic">mic</span>
+                <ion-icon name="send" class="send"></ion-icon>
             </div>
             <div class="mistake-cont">
                 <p>Gemini can make mistakes, so double-check it</p>
@@ -66,5 +68,7 @@
 
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
