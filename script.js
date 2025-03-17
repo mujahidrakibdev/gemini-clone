@@ -4,6 +4,8 @@ const plusIcon = document.querySelector(".plus-icon")
 const main = document.querySelector("main")
 const bottomIcons = document.querySelectorAll(".aside-bottom .ab-text")
 const bottomCont = document.querySelector(".bottom-cont")
+const textInput = document.querySelector(".text-input")
+
 
 
 menu.addEventListener("click", (e) => {
@@ -82,4 +84,13 @@ aside.addEventListener("mouseout", (e) => {
             icon.classList.replace("big-ab-text", "small-ab-text")
         }
     })
+})
+
+// input field height
+
+
+textInput.addEventListener("input", function () {
+    textInput.style.height = "20px"
+    textInput.style.height = textInput.scrollHeight + "px"
+    
 })
