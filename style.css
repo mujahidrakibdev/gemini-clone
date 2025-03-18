@@ -238,11 +238,12 @@ nav{
 
 .input-cont{
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 760px;
     border: 1px solid #757577;
-    border-radius: 5rem;
+    border-radius: 20px;
     margin: 0 auto; 
     padding: .5rem;
 }
@@ -261,6 +262,8 @@ nav{
     max-height: 100px;
     overflow-y: auto;
     line-height: 1.5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 .input-cont .text-input::placeholder{
     color: #b7b7cc;
@@ -268,14 +271,11 @@ nav{
     font-weight: 500;
 }
 
-.mic{
-    display: none !important;
-}
 
 .text-input:placeholder-shown ~ .mic{
-    display: block !important;
+    /* display: block !important; */
 }
-.text-input:placeholder-shown ~ .send{
+.text-input:placeholder-shown .send{
     display: none !important;
 }
 
@@ -305,8 +305,42 @@ nav{
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.5rem;
+    background-color: #262627;
 }
 
+.btn-cont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-btn{
+    display: flex;
+}
+.right-btn{
+    display: flex;
+    align-items: center;
+}
+
+.research-cont{
+    display: flex;
+    align-items: center;
+    background-color: #262627;
+    color: #757577;
+    padding-right: .5rem;
+    border-radius: 5rem;
+    margin-left: .5rem;
+}
+.research-cont:hover{
+    color: white;
+}
+.research-cont:hover .travel-icon{
+    color: white;
+}
+/* .mic{
+    display: none !important;
+} */
 .send{
     color: white;
 }
