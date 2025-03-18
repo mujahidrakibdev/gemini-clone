@@ -263,7 +263,7 @@ nav{
     overflow-y: auto;
     line-height: 1.5rem;
     margin-top: .5rem;
-    margin-bottom: .5rem;
+    margin-bottom: .75rem;
 }
 .input-cont .text-input::placeholder{
     color: #b7b7cc;
@@ -272,12 +272,6 @@ nav{
 }
 
 
-.text-input:placeholder-shown ~ .mic{
-    /* display: block !important; */
-}
-.text-input:placeholder-shown .send{
-    display: none !important;
-}
 
 .text-input::-webkit-scrollbar{
     width: 7px;
@@ -304,7 +298,7 @@ nav{
     padding: .5rem;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     background-color: #262627;
 }
 
@@ -338,12 +332,31 @@ nav{
 .research-cont:hover .travel-icon{
     color: white;
 }
-/* .mic{
-    display: none !important;
-} */
+.ds-txt{
+    font-size: .9rem;
+    margin-right: .5rem;
+}
+.mic{
+    background-color: transparent !important;
+    transition: .3s;
+}
+.mic:hover{
+    background-color: #262829 !important;
+}
 .send{
     color: white;
+    display: none;
+    font-size: 1.1rem;
+    padding: .7rem;
 }
+
+.text-input:not(:placeholder-shown) + .btn-cont .right-btn .mic{
+    display: none;
+}
+.text-input:not(:placeholder-shown) + .btn-cont .right-btn .send{
+    display: block;
+}
+
 
 .input-cont span:hover,
 .send:hover{
