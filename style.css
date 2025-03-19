@@ -210,8 +210,10 @@ nav{
 .message-cont{
     display: flex;
     justify-content: center;
-    align-items: center;
     height: calc(100% - 175px);
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
 }
 .message-cont h1{
     display: inline-block;
@@ -221,8 +223,57 @@ nav{
     font-weight: 500;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: none;
 }
 
+.message-inner .message .message-text{
+    color: white;
+    line-height: 28px;
+    word-wrap: break-word;
+}
+.message-inner .user-message{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+.message-inner .user-message .message-text{
+    background-color: #333537;
+    padding: 12px 16px;
+    border-radius: 24px 3px 24px 24px;
+    max-width: 75%;
+}
+
+.message-inner .bot-message{
+    margin-bottom: 20px;
+}
+.message-inner .bot-message .bot-top{
+    display: flex;
+    align-items: flex-start;
+}
+.message-inner .bot-message .bot-top .bot-image{
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+}
+.bot-bottom{
+    margin-left: 45px;
+    margin-top: 20px;
+}
+.bot-bottom span{
+    color: #A2A9B0;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: .35rem;
+    transition: .3s;
+    cursor: pointer;
+}
+.bot-bottom span:hover{
+    background-color: #292A2B;
+}
+.bot-bottom span:active{
+    color: #1d7efd;
+}
 
 
 /* question box */
