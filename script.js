@@ -88,9 +88,19 @@ aside.addEventListener("mouseout", (e) => {
 
 // input field height
 
-
 textInput.addEventListener("input", function () {
     textInput.style.height = "20px"
     textInput.style.height = textInput.scrollHeight + "px"
     
 })
+
+// prompt form
+
+const promptForm = document.querySelector(".prompt-form")
+
+promptForm.addEventListener("submit", handleSubmit)
+
+const handleSubmit = e => {
+    e.preventDefault()
+    alert("hi")
+}

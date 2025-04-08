@@ -241,7 +241,7 @@ nav{
     background-color: #333537;
     padding: 12px 16px;
     border-radius: 24px 3px 24px 24px;
-    max-width: 75%;
+    max-width: 65%;
 }
 
 .message-inner .bot-message{
@@ -277,7 +277,7 @@ nav{
 
 
 /* question box */
-.bottom-cont{
+.prompt-cont{
     position: fixed;
     bottom: 0;
     left: 50%;
@@ -285,6 +285,10 @@ nav{
     width: 100%;
     padding-left: 75px;
     transition: .3s;
+}
+
+.prompt-form{
+    width: 100%;
 }
 
 .input-cont{
@@ -394,9 +398,16 @@ nav{
 .mic:hover{
     background-color: #262829 !important;
 }
+
+.send-btn{
+    background: none;
+    display: none;
+    outline: none;
+    border: none;
+}
+
 .send{
     color: white;
-    display: none;
     font-size: 1.1rem;
     padding: .7rem;
 }
@@ -404,9 +415,12 @@ nav{
 .text-input:not(:placeholder-shown) + .btn-cont .right-btn .mic{
     display: none;
 }
-.text-input:not(:placeholder-shown) + .btn-cont .right-btn .send{
+.text-input:not(:placeholder-shown) + .btn-cont .right-btn .send-btn{
     display: block;
 }
+/* .text-input:not(:placeholder-shown) + .btn-cont .right-btn .send{
+    display: block;
+} */
 
 
 .input-cont span:hover,

@@ -72,22 +72,25 @@
         
 
 
-        <div class="bottom-cont">
+        <div class="prompt-cont">
             <div class="input-cont">
-                <textarea name="input-field" class="text-input" placeholder="Ask Gemini" required></textarea>
-                <div class="btn-cont">
-                    <div class="left-btn">
-                        <span class="material-symbols-outlined plus-icon">add</span>
-                        <div class="research-cont">
-                            <span class="material-symbols-outlined travel-icon">travel_explore</span>
-                            <div class="ds-txt">Deep Research</div>
+                <form action="#" class="prompt-form">
+                    <textarea name="input-field" class="text-input" placeholder="Ask Gemini" required></textarea>
+                    <div class="btn-cont">
+                        <div class="left-btn">
+                            <span class="material-symbols-outlined plus-icon">add</span>
+                            <div class="research-cont">
+                                <span class="material-symbols-outlined travel-icon">travel_explore</span>
+                                <div class="ds-txt">Deep Research</div>
+                            </div>
+                        </div>
+                        <div class="right-btn">
+                            <span class="material-symbols-outlined mic">mic</span>
+                            
+                            <button id="send-prompt-btn" class="send-btn"><ion-icon name="send" class="send"></ion-icon></button>
                         </div>
                     </div>
-                    <div class="right-btn">
-                        <span class="material-symbols-outlined mic">mic</span>
-                        <ion-icon name="send" class="send"></ion-icon>
-                    </div>
-                </div>
+                </form>
             </div>
             <div class="mistake-cont">
                 <p>Gemini can make mistakes, so double-check it</p>
