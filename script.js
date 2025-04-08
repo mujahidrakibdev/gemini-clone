@@ -96,11 +96,24 @@ textInput.addEventListener("input", function () {
 
 // prompt form
 
-const promptForm = document.querySelector(".prompt-form")
+const form = document.querySelector(".prompt-form")
+const textArea = document.querySelector(".text-input")
 
-promptForm.addEventListener("submit", handleSubmit)
+textArea.addEventListener("keydown", function(e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault()
+        form.requestSubmit()
+    }
 
-const handleSubmit = e => {
+})
+
+form.addEventListener("submit", handleSubmit)
+
+function handleSubmit(e) {
     e.preventDefault()
-    alert("hi")
+    const message = textArea.value.trim()
+    if (textArea.value !== "") {
+        console.log(message)
+        textArea.value = ""
+    }
 }
