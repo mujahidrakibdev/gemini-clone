@@ -3,7 +3,7 @@ const aside = document.querySelector("aside")
 const plusIcon = document.querySelector(".plus-icon")
 const main = document.querySelector("main")
 const bottomIcons = document.querySelectorAll(".aside-bottom .ab-text")
-const bottomCont = document.querySelector(".bottom-cont")
+const bottomCont = document.querySelector(".prompt-cont")
 const textInput = document.querySelector(".text-input")
 
 
@@ -96,6 +96,7 @@ textInput.addEventListener("input", function () {
 
 // prompt form
 
+const chatCont = document.querySelector(".message-inner")
 const form = document.querySelector(".prompt-form")
 const textArea = document.querySelector(".text-input")
 
@@ -109,11 +110,27 @@ textArea.addEventListener("keydown", function(e) {
 
 form.addEventListener("submit", handleSubmit)
 
+// create msg element
+function createMsgDiv(msgHtml, className) {
+    const div = document.createElement("div")
+    div.classList.add("message", className)
+    div.innerHTML = msgHtml
+    return div
+}
+
+// handle form submition
 function handleSubmit(e) {
     e.preventDefault()
-    const message = textArea.value.trim()
+    const userMsg = textArea.value.trim()
     if (textArea.value !== "") {
-        console.log(message)
+        console.log(userMsg)
         textArea.value = ""
     }
+
+    const userMsgHtml = `<p class="message-text"></p>`
+    const userMsgDiv = createMsgDiv(userMsgHtml, "user-message")
+
+    userMsgDiv.querySelector(".message-text").textContent = userMsg
+    chatCont.appendChild(userMsgDiv)
 }
+
