@@ -1,3 +1,5 @@
+import { GoogleGenAI } from "@google/genai";
+
 const menu = document.querySelector(".menu-icon")
 const aside = document.querySelector("aside")
 const plusIcon = document.querySelector(".plus-icon")
@@ -100,6 +102,26 @@ const chatCont = document.querySelector(".message-inner")
 const form = document.querySelector(".prompt-form")
 const textArea = document.querySelector(".text-input")
 
+let chatHistory = []
+
+// API Setup
+const API_KEY = "AIzaSyA1OE3k_C9IgfBGL6eccj083MfoeCZUqcc"
+const ai = new GoogleGenAI({ apiKey: "API_KEY" });
+
+const generateResponse = async () => {
+    try {
+        const response = await ai.models.generateContent({
+            model: "gemini-2.0-flash",
+            contents: "How does AI work?",
+        });
+        console.log(response.text);
+    } catch (error) {
+        
+    }
+}
+
+
+
 textArea.addEventListener("keydown", function(e) {
     if (e.key === "Enter" && !e.shiftKey) {
         e.preventDefault()
@@ -117,6 +139,8 @@ function createMsgDiv(msgHtml, ...classes) {
     div.innerHTML = msgHtml
     return div
 }
+
+
 
 // handle form submition
 function handleSubmit(e) {
@@ -153,6 +177,7 @@ function handleSubmit(e) {
                             </div>`
         const botMsgDiv = createMsgDiv(botMsgHtml, "bot-message", "loading")
         chatCont.appendChild(botMsgDiv)
+        generateResponse()
     }, 600);
 }
 
