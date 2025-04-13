@@ -111,9 +111,9 @@ textArea.addEventListener("keydown", function(e) {
 form.addEventListener("submit", handleSubmit)
 
 // create msg element
-function createMsgDiv(msgHtml, className) {
+function createMsgDiv(msgHtml, ...classes) {
     const div = document.createElement("div")
-    div.classList.add("message", className)
+    div.classList.add("message", ...classes)
     div.innerHTML = msgHtml
     return div
 }
@@ -139,7 +139,9 @@ function handleSubmit(e) {
     setTimeout(() => {
         // generate bot message div and append after 600 ms
         const botMsgHtml = `<div class="bot-top">
-                                <img src="images/fav-icon.svg" alt="logo" class="bot-image">
+                                <div class="spinner-wrapper">
+                                    <img src="images/fav-icon.svg" alt="logo" class="bot-image">
+                                </div>
                                 <p class="message-text">Just a sec...</p> 
                             </div>
                             <div class="bot-bottom">
@@ -149,7 +151,7 @@ function handleSubmit(e) {
                                 <span class="material-symbols-outlined">share</span>
                                 <span class="material-symbols-outlined">more_vert</span>
                             </div>`
-        const botMsgDiv = createMsgDiv(botMsgHtml, "bot-message")
+        const botMsgDiv = createMsgDiv(botMsgHtml, "bot-message", "loading")
         chatCont.appendChild(botMsgDiv)
     }, 600);
 }
