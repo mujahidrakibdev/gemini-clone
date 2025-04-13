@@ -105,7 +105,7 @@ const textArea = document.querySelector(".text-input")
 let chatHistory = []
 
 // API Setup
-const API_KEY = "AIzaSyA1OE3k_C9IgfBGL6eccj083MfoeCZUqcc"
+const API_KEY = ""
 const ai = new GoogleGenAI({ apiKey: "API_KEY" });
 
 const generateResponse = async () => {
